@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+#videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+}
+.video-player {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#user-2 {
+  display: none;
+}
+.small-frame {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  height: 170px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.controls {
+  position: fixed;
+  bottom: 10%;
+  left: 45%;
+  // transform: translate(50%,0);
+  .control-contianer {
+    display: inline-flex;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #ffffff;
+    padding: 0.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 3rem;
+  }
+  #camera-button {
+    background: purple;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+      background: rgb(240, 35, 240);
+    }
+  }
+  #mic-button {
+    background: rgb(75, 162, 250);
+    transition: background 0.3s ease-in-out;
+    &:hover {
+      background: rgb(117, 180, 243);
+    }
+  }
+  #leave-button {
+    background: red;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+      background: rgb(246, 108, 108);
+    }
+  }
+}
+
+@media screen and(max-width: 600px) {
+  .small-frame {
+    height: 80px;
+    width: 120px;
+  }
+}
